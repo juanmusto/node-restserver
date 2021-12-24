@@ -70,6 +70,7 @@ const userDelete = async(req, res = response) => {
 
     const { id } = req.params
 
+    const loggedUser  = req.loggedUser
     // remove fisically
     // const user = await User.findByIdAndDelete(id)
 
@@ -77,7 +78,8 @@ const userDelete = async(req, res = response) => {
 
     
     res.json({
-        user
+        user,
+        loggedUser
     })
 }
 
